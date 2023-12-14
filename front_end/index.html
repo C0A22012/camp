@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>キャンプ情報検索アプリ</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-area {
+      text-align: center;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    #search-text {
+      padding: 10px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .search-result {
+      text-align: left;
+    }
+
+    .search-result__hit-num {
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #search-result__list {
+      margin-bottom: 20px;
+    }
+
+    .target-area {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .target-area li {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .target-area li:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="search-area">
+      <form>
+        <input type="text" id="search-text" placeholder="検索ワードを入力">
+        <button onclick="searchCampsites()">検索</button>
+      </form>
+      <div class="search-result">
+        <div class="search-result__hit-num"></div>
+        <div id="search-result__list"></div>
+      </div>
+    </div>
+
+    <ul class="target-area">
+      <li>りんご120円</li>
+      <li>ばなな100円</li>
+      <li>みかん150円</li>
+      <li>いちご220円</li>
+      <li>すいか500円</li>
+    </ul>
+  </div><!-- /.wrapper -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+</body>
+</html>
