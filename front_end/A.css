@@ -29,3 +29,7 @@
 .target-area .hidden {
   display: none
 }
+body {
+  background-image: url("front_end/camp.jpg");
+  background-size: cover;
+}
