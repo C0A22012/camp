@@ -1,11 +1,19 @@
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 #クエリパラメータ
 @app.get("/camp")
-async def camp(word:str = "海が好きだ"):
+async def camp(word:str):
     s_words = {"海":["狩野川キャンプ場", "宇和海キャンプ村", "美ら海水族館キャンプ場"],
              "山":["木曽福島キャンプ場", "富士五湖周辺のキャンプ場", "穂高温泉周辺"],
              "川":["川野辺キャンプ場"]}
